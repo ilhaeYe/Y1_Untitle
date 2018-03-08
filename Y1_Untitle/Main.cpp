@@ -7,9 +7,14 @@
 //
 
 #include <iostream>
+#include "Common.h"
+#include "Game.hpp"
 
 int main(int argc, const char * argv[]) {
-    // insert code here...
-    std::cout << "Hello, World!\n";
+    
+    Game* pGame = new Game();
+    pGame->Run();
+    SAFE_DELETE(pGame);
+
     return 0;
 }

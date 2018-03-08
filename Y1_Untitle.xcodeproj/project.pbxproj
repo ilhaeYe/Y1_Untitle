@@ -7,7 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		517E745F202F1BD1003C83AE /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 517E745E202F1BD1003C83AE /* main.cpp */; };
+		517E745F202F1BD1003C83AE /* Main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 517E745E202F1BD1003C83AE /* Main.cpp */; };
+		51BDED2A204D99BA005CF88D /* Game.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 51BDED28204D99BA005CF88D /* Game.cpp */; };
+		51BDED2E204DA0AF005CF88D /* Time.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 51BDED2C204DA0AF005CF88D /* Time.cpp */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -24,7 +26,13 @@
 
 /* Begin PBXFileReference section */
 		517E745B202F1BD1003C83AE /* Y1_Untitle */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = Y1_Untitle; sourceTree = BUILT_PRODUCTS_DIR; };
-		517E745E202F1BD1003C83AE /* main.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
+		517E745E202F1BD1003C83AE /* Main.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = Main.cpp; sourceTree = "<group>"; };
+		51BDED28204D99BA005CF88D /* Game.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = Game.cpp; sourceTree = "<group>"; };
+		51BDED29204D99BA005CF88D /* Game.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = Game.hpp; sourceTree = "<group>"; };
+		51BDED2B204D9C63005CF88D /* Common.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Common.h; sourceTree = "<group>"; };
+		51BDED2C204DA0AF005CF88D /* Time.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = Time.cpp; sourceTree = "<group>"; };
+		51BDED2D204DA0AF005CF88D /* Time.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = Time.hpp; sourceTree = "<group>"; };
+		51DDB4F7203F43A30016772A /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -57,7 +65,13 @@
 		517E745D202F1BD1003C83AE /* Y1_Untitle */ = {
 			isa = PBXGroup;
 			children = (
-				517E745E202F1BD1003C83AE /* main.cpp */,
+				51BDED28204D99BA005CF88D /* Game.cpp */,
+				51BDED29204D99BA005CF88D /* Game.hpp */,
+				51BDED2C204DA0AF005CF88D /* Time.cpp */,
+				51BDED2D204DA0AF005CF88D /* Time.hpp */,
+				517E745E202F1BD1003C83AE /* Main.cpp */,
+				51DDB4F7203F43A30016772A /* README.md */,
+				51BDED2B204D9C63005CF88D /* Common.h */,
 			);
 			path = Y1_Untitle;
 			sourceTree = "<group>";
@@ -119,7 +133,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				517E745F202F1BD1003C83AE /* main.cpp in Sources */,
+				51BDED2E204DA0AF005CF88D /* Time.cpp in Sources */,
+				517E745F202F1BD1003C83AE /* Main.cpp in Sources */,
+				51BDED2A204D99BA005CF88D /* Game.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -255,7 +271,7 @@
 				517E7461202F1BD1003C83AE /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
+			defaultConfigurationName = Debug;
 		};
 		517E7462202F1BD1003C83AE /* Build configuration list for PBXNativeTarget "Y1_Untitle" */ = {
 			isa = XCConfigurationList;
@@ -264,7 +280,7 @@
 				517E7464202F1BD1003C83AE /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
+			defaultConfigurationName = Debug;
 		};
 /* End XCConfigurationList section */
 	};
