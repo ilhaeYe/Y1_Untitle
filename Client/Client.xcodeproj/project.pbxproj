@@ -10,6 +10,7 @@
 		51BCA479206D472600932D49 /* Main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 51BCA475206D472600932D49 /* Main.cpp */; };
 		51BCA47A206D472600932D49 /* Time.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 51BCA476206D472600932D49 /* Time.cpp */; };
 		51BCA47B206D472600932D49 /* Game.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 51BCA478206D472600932D49 /* Game.cpp */; };
+		51DFEE9A206D556F00AF5871 /* libwx_osx_cocoa_static.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 51DFEE99206D556F00AF5871 /* libwx_osx_cocoa_static.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -32,6 +33,11 @@
 		51BCA476206D472600932D49 /* Time.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Time.cpp; sourceTree = "<group>"; };
 		51BCA477206D472600932D49 /* Common.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Common.h; sourceTree = "<group>"; };
 		51BCA478206D472600932D49 /* Game.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Game.cpp; sourceTree = "<group>"; };
+		51C79E80206D4E5100089068 /* wxdebug.xcconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xcconfig; path = wxdebug.xcconfig; sourceTree = "<group>"; };
+		51C79E81206D4E5100089068 /* wxcocoa.xcconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xcconfig; path = wxcocoa.xcconfig; sourceTree = "<group>"; };
+		51C79E82206D4E5100089068 /* Info_cocoa.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info_cocoa.plist; sourceTree = "<group>"; };
+		51C79E83206D4E5100089068 /* wxrelease.xcconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xcconfig; path = wxrelease.xcconfig; sourceTree = "<group>"; };
+		51DFEE99206D556F00AF5871 /* libwx_osx_cocoa_static.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libwx_osx_cocoa_static.a; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -39,6 +45,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				51DFEE9A206D556F00AF5871 /* libwx_osx_cocoa_static.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -48,8 +55,10 @@
 		51BCA449206D332400932D49 = {
 			isa = PBXGroup;
 			children = (
+				51C79E7E206D4E5100089068 /* Configs */,
 				51BCA454206D332400932D49 /* Client */,
 				51BCA453206D332400932D49 /* Products */,
+				51C79E84206D50F300089068 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -72,6 +81,33 @@
 				51BCA474206D472600932D49 /* Time.hpp */,
 			);
 			path = Client;
+			sourceTree = "<group>";
+		};
+		51C79E7E206D4E5100089068 /* Configs */ = {
+			isa = PBXGroup;
+			children = (
+				51C79E7F206D4E5100089068 /* WxWidgets */,
+			);
+			path = Configs;
+			sourceTree = "<group>";
+		};
+		51C79E7F206D4E5100089068 /* WxWidgets */ = {
+			isa = PBXGroup;
+			children = (
+				51C79E80206D4E5100089068 /* wxdebug.xcconfig */,
+				51C79E81206D4E5100089068 /* wxcocoa.xcconfig */,
+				51C79E82206D4E5100089068 /* Info_cocoa.plist */,
+				51C79E83206D4E5100089068 /* wxrelease.xcconfig */,
+			);
+			path = WxWidgets;
+			sourceTree = "<group>";
+		};
+		51C79E84206D50F300089068 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				51DFEE99206D556F00AF5871 /* libwx_osx_cocoa_static.a */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -142,6 +178,7 @@
 /* Begin XCBuildConfiguration section */
 		51BCA457206D332400932D49 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 51C79E80206D4E5100089068 /* wxdebug.xcconfig */;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				CLANG_ANALYZER_NONNULL = YES;
@@ -197,6 +234,7 @@
 		};
 		51BCA458206D332400932D49 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 51C79E83206D4E5100089068 /* wxrelease.xcconfig */;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				CLANG_ANALYZER_NONNULL = YES;
@@ -245,19 +283,107 @@
 		};
 		51BCA45A206D332400932D49 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 51C79E81206D4E5100089068 /* wxcocoa.xcconfig */;
 			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "compiler-default";
+				CLANG_CXX_LIBRARY = "libstdc++";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 8BJAY7H53L;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_PREFIX_HEADER = "$(WXROOT)/include/wx/wxprec.h";
+				GCC_PREPROCESSOR_DEFINITIONS = "$(WX_PREPROCESSOR_DEFINITIONS)";
+				HEADER_SEARCH_PATHS = (
+					/Users/romanceduck/work/wxwidgets/samples/minimal,
+					"$(WXROOT)/include",
+					"$(WXROOT)/build/osx/setup/cocoa/include",
+				);
+				INFOPLIST_FILE = "$(SRCROOT)/Configs/WxWidgets/Info_cocoa.plist";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
+				OTHER_LDFLAGS = (
+					"-framework",
+					WebKit,
+					"-framework",
+					IOKit,
+					"-framework",
+					Carbon,
+					"-framework",
+					Cocoa,
+					"-framework",
+					AudioToolbox,
+					"-framework",
+					OpenGL,
+					"-framework",
+					AVFoundation,
+					"-framework",
+					CoreMedia,
+					"-framework",
+					Security,
+					"-weak_framework",
+					AVKit,
+					"$(OTHER_LDFLAGS)",
+					"-lz",
+				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				WXPLATFORM = "__WXOSX_$(WXTOOLKITUPPER)__";
+				WXROOT = /Users/romanceduck/work/wxWidgets;
+				WX_PREPROCESSOR_DEFINITIONS = "WXBUILDING $(WXPLATFORM) __WX__ _FILE_OFFSET_BITS=64 _LARGE_FILES MACOS_CLASSIC __WXMAC_XCODE__=1 SCI_LEXER NO_CXX11_REGEX WX_PRECOMP=1 wxUSE_UNICODE_UTF8=0 wxUSE_UNICODE_WCHAR=1";
 			};
 			name = Debug;
 		};
 		51BCA45B206D332400932D49 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 51C79E81206D4E5100089068 /* wxcocoa.xcconfig */;
 			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "compiler-default";
+				CLANG_CXX_LIBRARY = "libstdc++";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 8BJAY7H53L;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_PREFIX_HEADER = "$(WXROOT)/include/wx/wxprec.h";
+				GCC_PREPROCESSOR_DEFINITIONS = "$(WX_PREPROCESSOR_DEFINITIONS)";
+				HEADER_SEARCH_PATHS = (
+					/Users/romanceduck/work/wxwidgets/samples/minimal,
+					"$(WXROOT)/include",
+					"$(WXROOT)/build/osx/setup/cocoa/include",
+				);
+				INFOPLIST_FILE = "$(SRCROOT)/Configs/WxWidgets/Info_cocoa.plist";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
+				OTHER_LDFLAGS = (
+					"-framework",
+					WebKit,
+					"-framework",
+					IOKit,
+					"-framework",
+					Carbon,
+					"-framework",
+					Cocoa,
+					"-framework",
+					AudioToolbox,
+					"-framework",
+					OpenGL,
+					"-framework",
+					AVFoundation,
+					"-framework",
+					CoreMedia,
+					"-framework",
+					Security,
+					"-weak_framework",
+					AVKit,
+					"$(OTHER_LDFLAGS)",
+					"-lz",
+				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				WXPLATFORM = "__WXOSX_$(WXTOOLKITUPPER)__";
+				WXROOT = /Users/romanceduck/work/wxWidgets;
+				WX_PREPROCESSOR_DEFINITIONS = "WXBUILDING $(WXPLATFORM) __WX__ _FILE_OFFSET_BITS=64 _LARGE_FILES MACOS_CLASSIC __WXMAC_XCODE__=1 SCI_LEXER NO_CXX11_REGEX WX_PRECOMP=1 wxUSE_UNICODE_UTF8=0 wxUSE_UNICODE_WCHAR=1";
 			};
 			name = Release;
 		};

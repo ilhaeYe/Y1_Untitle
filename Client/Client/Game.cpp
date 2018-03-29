@@ -9,7 +9,7 @@
 #include "Game.hpp"
 
 Game::Game()
-:_isPlaying(false), _time(nullptr) {
+:_isPlaying(false) {
 
 }
 
@@ -19,7 +19,6 @@ Game::~Game(){
 
 void Game::Init(){
     _isPlaying = true;
-    _time = std::make_unique<Time>();
 
 }
 

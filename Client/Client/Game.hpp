@@ -30,7 +30,6 @@ private:
 private:
     bool _isPlaying;
     int _testInt;
-    std::unique_ptr<Time> _time;
 
 };
 
