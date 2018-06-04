@@ -1,38 +1,12 @@
 //
-//  main.cpp
-//  Y1_Untitle
+//  frame.cpp
+//  Client
 //
-//  Created by 예일해 on 2018. 2. 10..
+//  Created by 예일해 on 2018. 5. 24..
 //  Copyright © 2018년 RomanceDuck. All rights reserved.
 //
 
-#include <iostream>
-#include "Common.h"
-#include "Game.hpp"
-
-#include "wx/wxprec.h"
-#ifndef WX_PRECOMP
-    #include "wx/wx.h"
-#endif
-
-class MyApp : public wxApp
-{
-public:
-    virtual bool OnInit() wxOVERRIDE;
-};
-
-class MyFrame : public wxFrame
-{
-public:
-    MyFrame(const wxString& title);
-    
-    void OnQuit(wxCommandEvent& event);
-    void OnAbout(wxCommandEvent& event);
-    
-private:
-    wxDECLARE_EVENT_TABLE();
-    
-};
+#include "frame.hpp"
 
 enum
 {
@@ -45,31 +19,18 @@ wxBEGIN_EVENT_TABLE(MyFrame, wxFrame)
     EVT_MENU(Minimal_About, MyFrame::OnAbout)
 wxEND_EVENT_TABLE()
 
-wxIMPLEMENT_APP(MyApp);
-
-bool MyApp::OnInit()
-{
-    if (!wxApp::OnInit())
-        return false;
-    
-    MyFrame* frame = new MyFrame("Minimal wxWidgets App");
-    frame->Show(true);
-    
-    return true;
-}
-
 MyFrame::MyFrame(const wxString& title)
-        : wxFrame(NULL, wxID_ANY, title)
+: wxFrame(NULL, wxID_ANY, title, wxDefaultPosition, wxSize(800, 600))
 {
-//    SetIcon(wxICON(sample));
+    Centre();
+    //    SetIcon(wxICON(sample));
 #if wxUSE_MENUS
     wxMenu* fileMenu = new wxMenu;
-    
+    fileMenu->Append(Minimal_Quit, "E&xit\tAlt-X", "Quit this program");
+
     wxMenu* helpMenu = new wxMenu;
     helpMenu->Append(Minimal_About, "&About\tF1", "Show about dialog");
-    
-    fileMenu->Append(Minimal_Quit, "E&xit\tAlt-X", "Quit this program");
-    
+
     wxMenuBar* menuBar = new wxMenuBar();
     menuBar->Append(fileMenu, "&File");
     menuBar->Append(helpMenu, "&Help");
@@ -97,15 +58,14 @@ void MyFrame::OnAbout(wxCommandEvent& WXUNUSED(evrent))
 {
     wxMessageBox(wxString::Format
                  (
-                 "Welcome to %s!\n"
+                  "Welcome to %s!\n"
                   "\n"
                   "This is the minimal wxWidgets sample\n"
                   "running under %s.",
                   wxVERSION_STRING,
                   wxGetOsDescription()
-                 ),
+                  ),
                  "About wxWidgets minimal sample",
                  wxOK | wxICON_INFORMATION,
                  this);
 }
-

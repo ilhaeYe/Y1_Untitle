@@ -1,17 +1,16 @@
 //
-//  Game.hpp
+//  game.hpp
 //  Y1_Untitle
 //
 //  Created by 예일해 on 2018. 3. 6..
 //  Copyright © 2018년 RomanceDuck. All rights reserved.
 //
 
-#ifndef Game_hpp
-#define Game_hpp
+#ifndef game_hpp
+#define game_hpp
 
 #include <stdio.h>
 #include <memory>
-#include "Time.hpp"
 
 class Game{
 public:
@@ -33,4 +32,4 @@ private:
 
 };
 
-#endif /* Game_hpp */
+#endif /* game_hpp */

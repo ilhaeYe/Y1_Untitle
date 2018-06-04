@@ -7,9 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		51BCA479206D472600932D49 /* Main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 51BCA475206D472600932D49 /* Main.cpp */; };
-		51BCA47A206D472600932D49 /* Time.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 51BCA476206D472600932D49 /* Time.cpp */; };
-		51BCA47B206D472600932D49 /* Game.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 51BCA478206D472600932D49 /* Game.cpp */; };
+		5159A3E420B5C37600C6973A /* frame.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 5159A3E220B5C37600C6973A /* frame.cpp */; };
+		51B9D58B20C5A91800F28D92 /* glpane.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 51B9D58920C5A91800F28D92 /* glpane.cpp */; };
+		51BCA479206D472600932D49 /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 51BCA475206D472600932D49 /* main.cpp */; };
+		51BCA47B206D472600932D49 /* game.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 51BCA478206D472600932D49 /* game.cpp */; };
 		51DFEE9A206D556F00AF5871 /* libwx_osx_cocoa_static.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 51DFEE99206D556F00AF5871 /* libwx_osx_cocoa_static.a */; };
 /* End PBXBuildFile section */
 
@@ -26,13 +27,16 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		5159A3E120B5BF7800C6973A /* main.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = main.hpp; sourceTree = "<group>"; };
+		5159A3E220B5C37600C6973A /* frame.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = frame.cpp; sourceTree = "<group>"; };
+		5159A3E320B5C37600C6973A /* frame.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = frame.hpp; sourceTree = "<group>"; };
+		51B9D58920C5A91800F28D92 /* glpane.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = glpane.cpp; sourceTree = "<group>"; };
+		51B9D58A20C5A91800F28D92 /* glpane.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = glpane.hpp; sourceTree = "<group>"; };
 		51BCA452206D332400932D49 /* Client */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = Client; sourceTree = BUILT_PRODUCTS_DIR; };
-		51BCA473206D472600932D49 /* Game.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = Game.hpp; sourceTree = "<group>"; };
-		51BCA474206D472600932D49 /* Time.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = Time.hpp; sourceTree = "<group>"; };
-		51BCA475206D472600932D49 /* Main.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Main.cpp; sourceTree = "<group>"; };
-		51BCA476206D472600932D49 /* Time.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Time.cpp; sourceTree = "<group>"; };
-		51BCA477206D472600932D49 /* Common.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Common.h; sourceTree = "<group>"; };
-		51BCA478206D472600932D49 /* Game.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Game.cpp; sourceTree = "<group>"; };
+		51BCA473206D472600932D49 /* game.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = game.hpp; sourceTree = "<group>"; };
+		51BCA475206D472600932D49 /* main.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
+		51BCA477206D472600932D49 /* common.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = common.hpp; sourceTree = "<group>"; };
+		51BCA478206D472600932D49 /* game.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = game.cpp; sourceTree = "<group>"; };
 		51C79E80206D4E5100089068 /* wxdebug.xcconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xcconfig; path = wxdebug.xcconfig; sourceTree = "<group>"; };
 		51C79E81206D4E5100089068 /* wxcocoa.xcconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xcconfig; path = wxcocoa.xcconfig; sourceTree = "<group>"; };
 		51C79E82206D4E5100089068 /* Info_cocoa.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info_cocoa.plist; sourceTree = "<group>"; };
@@ -73,12 +77,15 @@
 		51BCA454206D332400932D49 /* Client */ = {
 			isa = PBXGroup;
 			children = (
-				51BCA477206D472600932D49 /* Common.h */,
-				51BCA478206D472600932D49 /* Game.cpp */,
-				51BCA473206D472600932D49 /* Game.hpp */,
-				51BCA475206D472600932D49 /* Main.cpp */,
-				51BCA476206D472600932D49 /* Time.cpp */,
-				51BCA474206D472600932D49 /* Time.hpp */,
+				51BCA477206D472600932D49 /* common.hpp */,
+				51BCA478206D472600932D49 /* game.cpp */,
+				51BCA473206D472600932D49 /* game.hpp */,
+				51BCA475206D472600932D49 /* main.cpp */,
+				5159A3E120B5BF7800C6973A /* main.hpp */,
+				51B9D58920C5A91800F28D92 /* glpane.cpp */,
+				51B9D58A20C5A91800F28D92 /* glpane.hpp */,
+				5159A3E220B5C37600C6973A /* frame.cpp */,
+				5159A3E320B5C37600C6973A /* frame.hpp */,
 			);
 			path = Client;
 			sourceTree = "<group>";
@@ -136,7 +143,7 @@
 		51BCA44A206D332400932D49 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastUpgradeCheck = 0920;
+				LastUpgradeCheck = 0940;
 				ORGANIZATIONNAME = RomanceDuck;
 				TargetAttributes = {
 					51BCA451206D332400932D49 = {
@@ -167,9 +174,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				51BCA47B206D472600932D49 /* Game.cpp in Sources */,
-				51BCA47A206D472600932D49 /* Time.cpp in Sources */,
-				51BCA479206D472600932D49 /* Main.cpp in Sources */,
+				51BCA47B206D472600932D49 /* game.cpp in Sources */,
+				5159A3E420B5C37600C6973A /* frame.cpp in Sources */,
+				51BCA479206D472600932D49 /* main.cpp in Sources */,
+				51B9D58B20C5A91800F28D92 /* glpane.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -191,6 +199,7 @@
 				CLANG_WARN_BOOL_CONVERSION = YES;
 				CLANG_WARN_COMMA = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
 				CLANG_WARN_EMPTY_BODY = YES;
@@ -198,6 +207,7 @@
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
@@ -247,6 +257,7 @@
 				CLANG_WARN_BOOL_CONVERSION = YES;
 				CLANG_WARN_COMMA = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
 				CLANG_WARN_EMPTY_BODY = YES;
@@ -254,6 +265,7 @@
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
@@ -286,11 +298,11 @@
 			baseConfigurationReference = 51C79E81206D4E5100089068 /* wxcocoa.xcconfig */;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = YES;
-				CLANG_CXX_LANGUAGE_STANDARD = "compiler-default";
-				CLANG_CXX_LIBRARY = "libstdc++";
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
+				CLANG_CXX_LIBRARY = "libc++";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 8BJAY7H53L;
-				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
 				GCC_PREFIX_HEADER = "$(WXROOT)/include/wx/wxprec.h";
 				GCC_PREPROCESSOR_DEFINITIONS = "$(WX_PREPROCESSOR_DEFINITIONS)";
 				HEADER_SEARCH_PATHS = (
@@ -327,6 +339,7 @@
 					"$(OTHER_LDFLAGS)",
 					"-lz",
 				);
+				PRODUCT_BUNDLE_IDENTIFIER = "org.wxwidgets.samples.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WXPLATFORM = "__WXOSX_$(WXTOOLKITUPPER)__";
 				WXROOT = /Users/romanceduck/work/wxWidgets;
@@ -339,11 +352,11 @@
 			baseConfigurationReference = 51C79E81206D4E5100089068 /* wxcocoa.xcconfig */;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = YES;
-				CLANG_CXX_LANGUAGE_STANDARD = "compiler-default";
-				CLANG_CXX_LIBRARY = "libstdc++";
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
+				CLANG_CXX_LIBRARY = "libc++";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 8BJAY7H53L;
-				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
 				GCC_PREFIX_HEADER = "$(WXROOT)/include/wx/wxprec.h";
 				GCC_PREPROCESSOR_DEFINITIONS = "$(WX_PREPROCESSOR_DEFINITIONS)";
 				HEADER_SEARCH_PATHS = (
@@ -380,6 +393,7 @@
 					"$(OTHER_LDFLAGS)",
 					"-lz",
 				);
+				PRODUCT_BUNDLE_IDENTIFIER = "org.wxwidgets.samples.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WXPLATFORM = "__WXOSX_$(WXTOOLKITUPPER)__";
 				WXROOT = /Users/romanceduck/work/wxWidgets;
